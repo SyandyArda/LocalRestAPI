@@ -8,6 +8,7 @@ import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Query
 
+
 interface ServiceApiSiswa{
     @GET("bacaTeman.php")
     suspend fun getSiswa(): List<DataSiswa>
