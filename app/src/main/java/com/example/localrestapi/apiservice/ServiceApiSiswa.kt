@@ -1,6 +1,7 @@
 package com.example.localrestapi.apiservice
 
 import com.example.localrestapi.modeldata.DataSiswa
+import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
@@ -9,5 +10,5 @@ interface ServiceApiSiswa{
     suspend fun getSiswa(): List<DataSiswa>
 
     @POST("insertTM.php")
-    suspend fun getSiswa(): List<DataSiswa>
+    suspend fun postSiswa(@Body dataSiswa: DataSiswa):retrofit2.Response<Void>
 }
